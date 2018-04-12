@@ -12,4 +12,5 @@
         );
       }
       echo json_encode($Array_Return);
+      echo getHostByName(getHostName());
 ?>
