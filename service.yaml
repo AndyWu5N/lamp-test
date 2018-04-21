@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: apache2-service
+spec:
+  selector:
+    app: apache2
+  ports:
+  - protocol: TCP
+    port: 80
+  type: LoadBalancer

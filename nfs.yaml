@@ -1,0 +1,49 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: nfs-0-volume
+  labels:
+    type: nfs
+spec:
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: 192.168.0.54
+    path: "/mnt/mysql-0/"
+
+---
+
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: nfs-1-volume
+  labels:
+    type: nfs
+spec:
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: 192.168.0.54
+    path: "/mnt/mysql-1/"
+
+---
+
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: nfs-2-volume
+  labels:
+    type: nfs
+spec:
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: 192.168.0.54
+    path: "/mnt/mysql-2/"
+
